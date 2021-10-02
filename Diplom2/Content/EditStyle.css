@@ -1,0 +1,45 @@
+﻿body {
+    background: #eafaff;
+}
+
+h2 {
+    color: #177b9a;
+    font-size: 32px;
+    
+}
+
+.editForm{
+    margin: 25px 0 10px 25px;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+    .editForm dt {
+        margin: 0;
+        padding: 5px 0;
+        width: 200px;
+        float: left;
+        clear: both;
+        color: black;
+        height: 30px;
+        text-decoration-line: underline;
+    }
+
+     .editForm dd {
+        margin: 0 0 0 150px;
+        padding: 5px 0;
+        height: 30px;
+    }
+
+        .editForm dd [type=text] {
+            border-radius: 5px;
+            width:200px;
+        }
+
+.is-invalid {
+    border-color: red;
+}
+
+.is-valid {
+    border-color: green;
+}

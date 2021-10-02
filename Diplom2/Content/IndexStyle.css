@@ -1,0 +1,88 @@
+﻿
+.table {
+    width: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-collapse: collapse;
+    outline: 3px solid #0ca3d2;
+    font-size: 15px;
+    background: #fff !important;
+   
+}
+
+    .table th {
+        font-weight: bold;
+        padding: 7px;
+        background: #0ca3d2;
+        border: none;
+        text-align: left;
+        font-size: 15px;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #0ca3d2;
+    }
+
+    .table td {
+        padding: 7px;
+        border: none;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        font-size: 15px;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background: #f8f8f8 !important;
+    }
+
+body {
+    background-color: #eafaff;
+}
+
+#windy {
+    width: 45%;
+    height: 600px;
+    float: right;
+    margin: 0 50px 0 0;
+    border-radius: 16px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    box-sizing: border-box;
+    
+} 
+
+.container a {
+    padding: 0 18px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #527881;
+    text-shadow: 0 1px #e3f1f1;
+    background: #cde5ef;
+    border: 1px solid;
+    border-color: #b4ccce #b3c0c8 #9eb9c2;
+    border-radius: 16px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+    -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    text-decoration-line: none;
+    margin: 0 50px 0 0;
+
+}
+
+    .container a:active {
+        background: #cde5ef;
+        border-color: #9eb9c2 #b3c0c8 #b4ccce;
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    }

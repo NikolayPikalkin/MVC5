@@ -1,0 +1,59 @@
+﻿@model Diplom2.Models.Station
+
+@{
+    ViewBag.Title = "Details";
+}
+<head>
+    <link href="~/Content/SubmitStyle.css" rel="stylesheet" />
+    <link href="~/Content/DetailStyle.css" rel="stylesheet" />
+    <title>Детали</title>
+</head>
+
+<body>
+    @Html.ActionLink("Вернуться на главную", "Index")
+    <h2 align="center">Детали</h2>
+
+    <div>
+        <dl class="attrs">
+            <dt>
+                @Html.DisplayName("Название станции:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayName("Широта:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Width)
+            </dd>
+
+            <dt>
+                @Html.DisplayName("Долгота:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Length)
+            </dd>
+
+            <dt>
+                @Html.DisplayName("Тип:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="container_href">
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id })
+
+    </div>
+
+
+</body>

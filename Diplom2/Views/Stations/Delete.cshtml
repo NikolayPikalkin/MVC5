@@ -1,0 +1,69 @@
+﻿@model Diplom2.Models.Station
+
+@{
+    ViewBag.Title = "Delete";
+}
+<head>
+    <link href="~/Content/SubmitStyle.css" rel="stylesheet" />
+    <link href="~/Content/DetailStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    @Html.ActionLink("Вернуться на главную", "Index")
+    <h2 align="center">Удаление станции</h2>
+
+    <h3>Вы действительно хотите удалить эту станцию?</h3>
+    <div>
+        <dl class="attrs">
+            <dt>
+                @Html.DisplayName("Название станции:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayName("Широта:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Width)
+            </dd>
+
+            <dt>
+                @Html.DisplayName("Долгота:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Length)
+            </dd>
+
+            <dt>
+                @Html.DisplayName("Тип:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+
+        </dl>
+
+        <div class="container">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <input type="submit" style="margin: 0 0 0 250px;"  value="Удалить" />
+
+            }
+
+
+        </div>
+
+
+    </div>
+</body>
+
+

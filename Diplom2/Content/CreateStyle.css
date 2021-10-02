@@ -1,0 +1,67 @@
+﻿body {
+    background: #eafaff;
+    
+}
+h2 {
+    color: #177b9a;
+    font-size: 32px;
+    
+}
+.dataStation {
+    width: 50%;
+    margin: 10px 0 0 0;
+    display: inline-block
+}
+.imgStation {
+    width: 50%;
+    padding: 100px 0 0 0;
+    float: right;
+    display: inline-block
+}
+
+.container {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin: 0 25px 0 0;
+}
+
+    .container div {
+        height: 15px;
+        margin: 0 0 0 25px;
+    }
+.dlFormDec, .dlFormDegree {
+    margin: 25px 0 10px 25px;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+    .dlFormDec dt, .dlFormDegree dt {
+        margin: 0;
+        padding: 5px 0;
+        width: 200px;
+        float: left;
+        clear: both;
+        color: black;
+        height: 30px;
+        text-decoration-line: underline;
+    }
+
+    .dlFormDec dd, .dlFormDegree dd {
+        margin: 0 0 0 150px;
+        padding: 5px 0;
+        height: 30px;
+    }
+
+        .dlFormDec dd [type=text], .dlFormDegree dd [type=text] {
+            border-radius: 5px;
+        }
+
+.is-invalid {
+    border-color: red;
+}
+
+.is-valid {
+    border-color: green;
+}

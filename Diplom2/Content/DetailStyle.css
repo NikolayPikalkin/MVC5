@@ -1,0 +1,45 @@
+﻿.attrs {
+    margin: 0 250px 20px 250px;
+    border: 2px solid #0ca3d2;
+    border-collapse: collapse;
+    
+}
+
+    .attrs dt {
+        float: left;
+        width: 30%;
+        box-sizing: border-box;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .attrs dd {
+        margin: 0 0 0 30%;
+        border-left: 1px solid #ddd;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 10px;
+        padding-right: 4px;
+    }
+
+        .attrs dd ~ dt, .attrs dd ~ dd {
+            border-top: 1px solid #ddd;
+        }
+
+        .attrs dt:nth-child(4n+1), .attrs dd:nth-child(4n+2) {
+            background: #efefef;
+        }
+body {
+    background: #eafaff;
+    
+}
+h2 {
+    color: #177b9a;
+    font-size: 32px;
+
+}
+h3 {
+    color: #177b9a;
+    font-size: 20px;
+    margin: 0 0 10px 250px;
+}

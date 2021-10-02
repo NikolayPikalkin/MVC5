@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/LogoutStyle.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Выход</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <input type="submit" value="ВЫЙТИ" />
+            }
+        </div>
+
+        <div class="login-help">
+            @Html.ActionLink("Вернуться на главную", "Index", "Stations")
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿@model Diplom2.Models.Station
+
+@{
+    ViewBag.Title = "Edit";
+}
+<head>
+    <link href="~/Content/EditStyle.css" rel="stylesheet" />
+    <link href="~/Content/SubmitStyle.css" rel="stylesheet" />
+
+    <title>Редактирование</title>
+</head>
+<body>
+    @Html.ActionLink("Вернуться на главную", "Index")
+    <h2 align="center">Редактирование параметров станции</h2>
+
+    <form id="inputForm" name="inputForm" method="post" onsubmit="return validate_form();">
+
+        @Html.AntiForgeryToken()
+
+        <div>
+            <dl class="editForm">
+                <dt>
+                    @Html.DisplayName("Название станции:")
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Широта:")
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.Width)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Долгота:")
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.Length)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Тип:")
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.Type)
+                </dd>
+
+            </dl>
+
+            <div class="container" style="margin: 0 0 0 25px;">
+
+                <input type="submit" value="Сохранить" />
+            </div>
+        </div>
+
+
+
+        @*<div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="form-group">
+                @Html.Label("Название станции")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Широта")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Width, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Width, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Долгота")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Length, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Length, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Тип")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        @*<div class="container">
+                    <input type="submit" value="Сохранить" class="btn btn-default" />
+                </div>
+                </div>
+            }
+
+
+            @Html.ActionLink("Вернуться на главную", "Index")*@
+    </form>
+</body>
+<script src="~/Scripts/scriptValidat.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

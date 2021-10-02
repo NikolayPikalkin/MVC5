@@ -1,0 +1,107 @@
+﻿@model Diplom2.Models.Station
+
+@{
+    ViewBag.Title = "Create";
+}
+<head>
+    <link href="~/Content/CreateStyle.css" rel="stylesheet" />
+    <link href="~/Content/SubmitStyle.css" rel="stylesheet" />
+    <style>
+        #field1, #field2, #field3, #field4, #field5, #field6 {
+            width: 49px;
+        }
+    </style>
+    <title>Добавление станции</title>
+</head>
+
+<body>
+    @Html.ActionLink("Вернуться на главную", "Index")
+    <h2 align="center">Добавление станции</h2>
+
+
+    <div class="main">
+        <div class="dataStation" >
+            <div class="container">
+                <div style="font-weight: bold">Вид координат:</div>
+                <div>
+                    @Html.RadioButton("selectionForm", "dec", true) <span>Десятичный</span>
+                    @Html.RadioButton("selectionForm", "degree", false) <span>Градусы, минуты, секунды</span>
+                </div>
+            </div>
+
+            <form id="inputForm" name ="inputForm" method="post" onsubmit="return validate_form();" action="/Stations/Create">
+            </form>
+
+            <form id="formDec" hidden="true" method="post" action="/Stations/Create">
+                <dl class="dlFormDec">
+
+                    <dt>Название станции: </dt>
+                    <dd><input type="text" name="Name" /> </dd>
+
+
+                    <dt>Широта:</dt>
+                    <dd><input type="text" name="Width" /> </dd>
+
+
+                    <dt>Долгота:</dt>
+                    <dd><input type="text" name="Length" /> </dd>
+
+
+                    <dt>Тип:</dt>
+                    <dd><input type="text" name="Type" /> </dd>
+
+                    <dt>
+                        <input type="submit" onclick="convert()" value="Добавить" />
+                    </dt>
+
+                </dl>
+            </form>
+
+
+            <form id="formDegree" hidden="true" method="post" action="/Stations/Create">
+                <dl class="dlFormDegree">
+
+                    <dt>Название станции:</dt>
+                    <dd><input type="text" name="Name" /> </dd>
+
+                    <dt>Широта:</dt>
+                    <dd>
+                        <input id="field1" type="text" name="DegreeWidth" /> °
+                        <input id="field2" type="text" name="MinuteWidth" /> '
+                        <input id="field3" type="text" name="SecondWidth" /> "
+                        <input id="width" hidden="true" type="text" name="Width" />
+                    </dd>
+
+                    <dt>Долгота:</dt>
+                    <dd>
+                        <input id="field4" type="text" name="DegreeLength" /> °
+                        <input id="field5" type="text" name="MinuteLength" /> '
+                        <input id="field6" type="text" name="SecondLength" /> "
+                        <input id="length" hidden="true" type="text" name="Length" />
+                    </dd>
+
+                    <dt>Тип:</dt>
+                    <dd><input type="text" name="Type" /> </dd>
+
+                    <dt>
+                        <input type="submit" onclick="convert()" value="Добавить" />
+
+                    </dt>
+
+                </dl>
+
+            </form>
+        </div>
+
+        <div class="imgStation">
+            <img src="~/Content/vsat2.png" />
+        </div>
+    </div>
+</body>
+
+<script src="~/Scripts/scriptValidat.js"></script>
+<script src="~/Scripts/scriptConvert.js"></script>
+<script src="~/Scripts/scriptSelectionForm.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
